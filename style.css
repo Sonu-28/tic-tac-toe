@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    height: 5em;
+    background-color: darkviolet;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3.5em;
+    color: aliceblue;
+    font-family: cursive;
+}
+
+header h1::first-letter{
+    color: lightseagreen;
+}
+
+
+main {
+    width: 100%;
+    height: 36.1em;
+    background-color: rgb(59, 59, 59);
+    position: relative;
+}
+
+.board {
+    width: 20em;
+    height: 20em;
+    background-color: darkviolet;
+    position: absolute;
+    top: 6em;
+    left: 32em;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 4px;
+}
+
+.cell {
+    width: 6.5em;
+    height: 6.5em;
+    border: 1px solid black;
+    background-color: aliceblue;
+}
+
+.cell:nth-child(1), .cell:nth-child(2), .cell:nth-child(3) {
+    border-top: none;
+}
+
+.cell:nth-child(1), .cell:nth-child(4), .cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(3), .cell:nth-child(6), .cell:nth-child(9) {
+    border-right: none;
+}
+
+.cell:nth-child(7), .cell:nth-child(8), .cell:nth-child(9) {
+    border-bottom: none;
+}
